@@ -1,0 +1,19 @@
+Eclipse - Eclipse IDE contains a base workspace and an extensible plug-in system for customizing the environment.
+It is mainly used for Java programming. By means of various plug-ins, Eclipse may also be used to develop applications
+in other programming languages: Ada, ABAP, C, C++, COBOL, Fortran, Haskell, JavaScript, Lasso, Natural, Perl, PHP,
+Prolog, Python, R, Ruby (including Ruby on Rails framework), Scala, Clojure, Groovy, Scheme, and Erlang.
+
+Komodo IDE - Komodo is an IDE for dynamic programming languages. It supports languages like Python, Perl, PHP, Ruby,
+Tcl, SQL, Smarty, CSS, HTML and XML and is available for different computer latforms (Linux, Mac OS X, and Windows).
+
+NetBeans - NetBeans is an IDE for developing primarily with Java, but also with other languages, in particular PHP, C/C++, and HTML5.
+The NetBeans IDE is written in Java and can run on Windows, OS X, Linux, Solaris and other platforms supporting a compatible JVM.
+The NetBeans Platform allows applications to be developed from a set of modular software components called modules.
+Applications based on the NetBeans Platform (including the NetBeans IDE itself) can be extended by third party developers.
+
+JDeveloper - JDeveloper is a freeware IDE supplied by Oracle Corporation. It offers features for development in Java, XML,
+SQL and PL/SQL, HTML, JavaScript, BPEL and PHP. 
+
+IntelliJ IDEA - IntelliJ IDEA is a Java IDE for developing computer software. It supports Groovy, XML/XSL, ActionScript/MXML,
+CoffeeScript, HTML/XHTML/CSS, Java, JavaFX, JavaScript, Python, Ruby/JRuby, SQL. Via separate plug-ins it also supports
+Clojure, Dart, Scala, Haskell, Haxe, Jelastic, Kotlin, Lua, Node.js, PHP, TypoScript.

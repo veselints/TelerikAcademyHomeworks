@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>NotebookStore</title>
+		<style>
+			body
+			{
+				font-family: calibri;
+			}
+			legend
+			{
+				text-align: center;
+			}
+			th
+			{
+				font-size: 24px;
+			}
+			.withFrame
+			{
+				border: 1px solid black;
+				padding: 3px;
+			}
+			#minPrice, #maxPrice, #minRam, #maxRam
+			{
+				width: 30px;
+				border: 0px;
+				text-align: right;
+			}
+		</style>
+		<script>
+			function updateTextInput(val, target)
+			{
+				document.getElementById(target).value=val; 
+			}
+		</script>
+	</head>
+	<body>
+	<form>
+		<table class="withFrame">
+			<thead>
+				<tr>
+					<th colspan="2">
+						<a href="Notebook%20store.html">Apple</a>
+						<a href="Notebook%20store.html">Toshiba</a>
+						<a href="Notebook%20store.html">Lenovo</a>
+						<a href="Notebook%20store.html">Dell</a>
+						<a href="Notebook%20store.html">Asus</a>
+						<a href="Notebook%20store.html">Hacer</a>
+						<a href="Notebook%20store.html">HP</a>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<table class="withFrame">
+							<tbody>
+								<tr>
+									<td>
+										<fieldset>
+											<legend>Apple MacBook Air</legend>
+											<table>
+												<tbody>
+													<tr>
+														<td rowspan="2"><img src="Images/Comp.jpg" alt="Comp" height="68"/></td>
+														<td>64 GB SSD</td>
+													</tr>
+													<tr>
+														<td>2GB DDR</td>
+													</tr>
+													<tr>
+														<td>1300 USD</td>
+														<td>Intel Core i5</td>
+													</tr>
+												</tbody>
+											</table>
+										</fieldset>
+									</td>
+									<td>
+										<fieldset>
+											<legend>Apple MacBook Air</legend>
+											<table>
+												<tbody>
+													<tr>
+														<td rowspan="2"><img src="Images/Comp.jpg" alt="Comp" height="68"/></td>
+														<td>64 GB SSD</td>
+													</tr>
+													<tr>
+														<td>2GB DDR</td>
+													</tr>
+													<tr>
+														<td>1300 USD</td>
+														<td>Intel Core i5</td>
+													</tr>
+												</tbody>
+											</table>
+										</fieldset>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<fieldset>
+											<legend>Apple MacBook Air</legend>
+											<table>
+												<tbody>
+													<tr>
+														<td rowspan="2"><img src="Images/Comp.jpg" alt="Comp" height="68"/></td>
+														<td>64 GB SSD</td>
+													</tr>
+													<tr>
+														<td>2GB DDR</td>
+													</tr>
+													<tr>
+														<td>1300 USD</td>
+														<td>Intel Core i5</td>
+													</tr>
+												</tbody>
+											</table>
+										</fieldset>
+									</td>
+									<td>
+										<fieldset>
+											<legend>Apple MacBook Air</legend>
+											<table>
+												<tbody>
+													<tr>
+														<td rowspan="2"><img src="Images/Comp.jpg" alt="Comp" height="68"/></td>
+														<td>64 GB SSD</td>
+													</tr>
+													<tr>
+														<td>2GB DDR</td>
+													</tr>
+													<tr>
+														<td>1300 USD</td>
+														<td>Intel Core i5</td>
+													</tr>
+												</tbody>
+											</table>
+										</fieldset>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<fieldset>
+											<legend>Apple MacBook Air</legend>
+											<table>
+												<tbody>
+													<tr>
+														<td rowspan="2"><img src="Images/Comp.jpg" alt="Comp" height="68"/></td>
+														<td>64 GB SSD</td>
+													</tr>
+													<tr>
+														<td>2GB DDR</td>
+													</tr>
+													<tr>
+														<td>1300 USD</td>
+														<td>Intel Core i5</td>
+													</tr>
+												</tbody>
+											</table>
+										</fieldset>
+									</td>
+									<td>
+										<fieldset>
+											<legend>Apple MacBook Air</legend>
+											<table>
+												<tbody>
+													<tr>
+														<td rowspan="2"><img src="Images/Comp.jpg" alt="Comp" height="68"/></td>
+														<td>64 GB SSD</td>
+													</tr>
+													<tr>
+														<td>2GB DDR</td>
+													</tr>
+													<tr>
+														<td>1300 USD</td>
+														<td>Intel Core i5</td>
+													</tr>
+												</tbody>
+											</table>
+										</fieldset>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td>
+						<table id="ranges">
+							<tbody>
+								
+									<tr>
+										<td>
+											Min price: <input type="text" id="minPrice" value="500"> USD
+									    </td>    
+									</tr>
+									<tr>
+										<td>
+											<input type="range" name="minPriceInput" min="100" max="1500" step="100" value="500" onchange="updateTextInput(this.value, 'minPrice');">
+									    </td>
+									</tr>
+									<tr>
+										<td>
+											Max price: <input type="text" id="maxPrice" value="1500"> USD
+									    </td>    
+									</tr>
+									<tr>
+										<td>
+											<input type="range" name="maxPriceInput" min="500" max="5100" step="200" value="1500" onchange="updateTextInput(this.value, 'maxPrice');">
+									    </td>
+									</tr>
+									<tr>
+										<td>
+											Min RAM: <input type="text" id="minRam" value="4"> GB
+									    </td>    
+									</tr>
+									<tr>
+										<td>
+											<input type="range" name="minRamInput" min="1" max="16" step="1" value="4" onchange="updateTextInput(this.value, 'minRam');">
+									    </td>
+									</tr>
+									<tr>
+										<td>
+											Max RAM: <input type="text" id="maxRam" value="16"> GB
+									    </td>    
+									</tr>
+									<tr>
+										<td>
+											<input type="range" name="maxRamInput" min="4" max="32" step="4" value="16" onchange="updateTextInput(this.value, 'maxRam');">
+									    </td>
+									</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</form>
+	</body>
+</html>

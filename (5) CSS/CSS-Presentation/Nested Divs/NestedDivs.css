@@ -1,0 +1,11 @@
+div	{
+	border: 2px solid red;
+	background-color: black;
+	width: 90%;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+	behavior: url(pie.htc); /* These last 3 lines make border-radius work on IE 7 and IE 8 */
+    position: relative;
+    zoom: 1;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Methods</title>
+	<style>
+		
+	</style>
+	<script>
+
+		// Problem 1. Make person:
+
+		function MakePerson(fName, lName, years, isFemale) {
+			return {
+				firstname: fName,
+				lastname: lName,
+				age: years,
+				gender: isFemale
+			};
+		}
+
+		function generateTenPersons() {
+			var personArray = [];
+			personArray.push(MakePerson('Nikolay', 'Pavlov', 24, false));
+			personArray.push(MakePerson('Ivelina', 'Todorova', 25, true));
+			personArray.push(MakePerson('Evlogi', 'Pavlov', 26, false));
+			personArray.push(MakePerson('Nikolay', 'Klenov', 25, false));
+			personArray.push(MakePerson('Anita', 'Popova', 31, true));
+			personArray.push(MakePerson('Nikolay', 'Stoyanova', 24, true));
+			personArray.push(MakePerson('Martin', 'Pavlov', 24, false));
+			personArray.push(MakePerson('Evstati', 'Stavriev', 24, false));
+			personArray.push(MakePerson('Doncho', 'Minkov', 34, false));
+			personArray.push(MakePerson('Doncho', 'Stoyanov', 14, false));
+			return personArray;
+		}
+
+		// Problem 2. People of age:
+
+		function age18OrGreater(person) {
+			return(person.age >= 18);
+		}
+
+		function checkEvry18() {
+			window.alert(generateTenPersons().every(age18OrGreater));
+		}
+
+		// Problem 3. Underage people:
+
+		function printUnderaged() {
+			generateTenPersons().filter(age18OrGreater)
+				.forEach(function(person) {
+					console.log(person)
+					}
+				)
+		}
+
+		// Problem 4. Average age of females:
+
+		function isFemale(person) {
+			return(person.gender);
+		}
+
+		function femaleAverageAge() {
+			var result = 0;
+			var numerOfFemale = 0;
+			generateTenPersons().filter(isFemale)
+				.forEach(function(person) {
+					result += person.age;
+					numerOfFemale += 1;
+					}
+				)
+			return result/numerOfFemale;
+		}
+
+		// Problem 5. Youngest person:
+
+		if (!Array.prototype.find) {
+			Array.prototype.find = function(callback) {
+				var i,
+					len = this.length;
+				for(i = 0; i < len; i += 1) {
+					if(callback(this[i], i, this)) {
+						return this[i];
+					}
+				}
+				return undefined;
+			};
+		}
+
+		function findTheYoungestMale() {
+			var result = generateTenPersons()
+				.sort(function (a, b) {return a.age - b.age;})
+				.find(function(person) {return !person.gender;});
+			return result.firstname + ' ' + result.lastname;
+		}
+
+		// Problem 6. Group people:
+
+		function groupPersons() {
+			var result = generateTenPersons()
+				.reduce(function (obj, item) {
+					if (obj[item.firstname[0]]) {
+				        obj[item.firstname[0]].push(item);
+				    }
+				    else {
+				        obj[item.firstname[0]] = [item];
+				    }
+				    return obj;
+				}
+			);
+			return result;
+		}
+
+	</script>
+</head>
+<body>
+
+<div>
+	<h3>Problem 1. Make person</h3>
+	<p>
+		Write a function for creating persons. - Each person must have firstname, lastname, age and gender (true is female, false is male) /n
+		Generate an array with ten person with different names, ages and genders
+	</p>
+	<div>
+		<span>To generate the array click here:</span>
+		<input type="button" onclick="window.alert(generateTenPersons())" value="Generate array of ten persons">
+	</div>
+</div>
+
+<div>
+	<h3>Problem 2. People of age</h3>
+	<p>
+		Write a function that checks if an array of person contains only people of age (with age 18 or greater) /n
+		Use only array methods and no regular loops (for, while)
+	</p>
+	<div>
+		<span>Check the array:</span>
+		<input type="button" onclick="checkEvry18()" value="Check!">
+	</div>
+</div>
+
+<div>
+	<h3>Problem 3. Underage people</h3>
+	<p>
+		Write a function that prints all underaged persons of an array of person
+		Use Array#filter and Array#forEach
+		Use only array methods and no regular loops (for, while)
+	</p>
+	<div>
+		<span>Look at the console!</span>
+		<input type="button" onclick="printUnderaged()" value="Print underaged">
+	</div>
+</div>
+
+<div>
+	<h3>Problem 4. Average age of females</h3>
+	<p>
+		Write a function that calculates the average age of all females, extracted from an array of persons
+		Use Array#filter
+		Use only array methods and no regular loops (for, while)
+	</p>
+	<div>
+		<span>Calculate average age</span>
+		<input type="button" onclick="window.alert(femaleAverageAge())" value="Calculate!">
+	</div>
+</div>
+
+<div>
+	<h3>Problem 5. Youngest person</h3>
+	<p>
+		Write a function that finds the youngest male person in a given array of people and prints his full name
+		Use only array methods and no regular loops (for, while)
+		Use Array#find
+	</p>
+	<div>
+		<span>Find the youngest male</span>
+		<input type="button" onclick="window.alert(findTheYoungestMale())" value="Find him!">
+	</div>
+</div>
+
+<div>
+	<h3>Problem 6. Group people</h3>
+	<p>
+		Write a function that groups an array of persons by first letter of first name and returns the groups as a JavaScript Object
+		Use Array#reduce
+		Use only array methods and no regular loops (for, while)
+	</p>
+	<div>
+		<span>Look at the console!!!</span>
+		<input type="button" onclick="console.log(groupPersons())" value="Group!">
+	</div>
+</div>
+
+</body>
+</html>

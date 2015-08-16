@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Using Objects</title>
+	<style>
+		
+	</style>
+	<script>
+
+		// Problem 1. Planar coordinates:
+
+		function buildPoint(x, y) {
+			return {
+				x: x,
+				y: y,
+				toString: function() {
+					return('X: ' + x + ' Y: ' + y);
+				}
+			};
+		}
+
+		function buildLine(startPoint, endPoint) {
+			return {
+				startPoint: startPoint,
+				endPoint: endPoint,
+				toString: function() {
+					return('Start point: ' + startPoint + ' End point: ' + endPoint);
+				}
+			};
+		}
+
+		function distanceBetweenTwoPoints(firstPoint, secondPoint) {
+			var xDistance = firstPoint.x - secondPoint.x;
+			var yDistance = firstPoint.y - secondPoint.y;
+			var distance = Math.sqrt(xDistance*xDistance + yDistance*yDistance);
+			return window.alert('Distance is: ' + distance);
+		}
+
+		// Problem 2. Remove elements:
+		function createArray() {
+			var inputString = document.getElementById('sequenceInput').value;
+			var inputArray = inputString.split(' ');
+			return inputArray;
+		}
+
+
+		Array.prototype.remove = function(elementToRemove) {
+			var cleanedArray = new Array();
+			for (var i = 0; i < this.length; i++) {
+				if (this[i] !== elementToRemove) {
+					cleanedArray.push(this[i]);
+				}
+			}
+			return window.alert(cleanedArray);
+		}
+
+		// Problem 3. Deep copy
+
+		function deepCopy(inputObject) {
+			var copiedObject = {};
+			for (var prop in inputObject) {
+				copiedObject[prop] = inputObject[prop];
+			}
+			return(copiedObject);
+		}
+
+		function testDeepCopy() {
+			var testObject = {firstName: 'Pesho', lastName: 'Goshev', age: 23}
+			var returnObject = deepCopy(testObject);
+			returnObject.lastName = 'Evstatiev';
+			console.log(testObject);
+			console.log(returnObject);
+		}
+
+		// Problem 4. Has property
+
+		function hasProperty(obj, property) {
+			for (var prop in obj) {
+				if (prop === property) {
+					return true;
+				}
+				return false;
+			}
+		}
+
+		function testHasProperty() {
+			var testObj = {lenght: 23, name: 'Pesho'};
+			var hasProp = hasProperty(testObj, 'lenght');
+			console.log(hasProp);
+			
+			testObj = {age: 23, name: 'Pesho'};
+			hasProp = hasProperty(testObj, 'lenght');
+			console.log(hasProp);
+
+			testObj = 'Pesho';
+			hasProp = hasProperty(testObj, 'lenght');
+			console.log(hasProp);
+		}
+
+		// Problem 5. Youngest person
+
+		function findTheYoungest(arrayOfPeople) {
+			var youngest = arrayOfPeople[0];
+			for (var i = 1; i < arrayOfPeople.length; i++) {
+				if (arrayOfPeople[i].age < youngest.age) {
+					youngest = arrayOfPeople[i];
+				}				
+			}
+			return(youngest.firstname + ' ' + youngest.lastname);
+		}
+
+		function testfindTheYoungest() {
+			var testArray = [
+				{ firstname : 'Gosho', lastname: 'Petrov', age: 32 },
+				{ firstname : 'Bay', lastname: 'Ivan', age: 81 },
+				{ firstname : 'Bay', lastname: 'Lazo', age: 30 },
+				{ firstname : 'Nikolay', lastname: 'Pavlov', age: 8 },
+				{ firstname : 'Ivelina', lastname: 'Todorova', age: 26 },
+				{ firstname : 'Penka', lastname: 'Miteva', age: 94 }
+				];
+			var testResult = findTheYoungest(testArray);
+			window.alert('The youngest is ' + testResult);
+		}
+
+// Problem 6. ???
+
+		var testGroupArray = [
+			{ firstname : 'Gosho', lastname: 'Pavlov', age: 32 },
+			{ firstname : 'Bay', lastname: 'Lazo', age: 81 },
+			{ firstname : 'Gosho', lastname: 'Lazo', age: 32 },
+			{ firstname : 'Nikolay', lastname: 'Pavlov', age: 32 },
+			{ firstname : 'Penka', lastname: 'Todorova', age: 26 },
+			{ firstname : 'Penka', lastname: 'Miteva', age: 26 }
+			];
+
+		function group(people, property) {
+			var goupedPeopleArray = {};
+			for (var person of people) {
+				var currentProp = person[property];
+				if (goupedPeopleArray[currentProp]) {
+					goupedPeopleArray[currentProp].push(person);
+				} 
+				else {
+					goupedPeopleArray[currentProp] = [person];
+				}
+			}
+			return goupedPeopleArray;
+		}
+
+		function testGroupByAge() {
+			var result = group(testGroupArray, 'age');
+			console.log(result);
+		}
+
+		function testGroupByFirstname() {
+			var result = group(testGroupArray, 'firstname');
+			console.log(result);		
+		}
+
+		function testGroupByLastname() {
+			var result = group(testGroupArray, 'lastname');
+			console.log(result);
+		}
+
+	</script>
+</head>
+<body>
+
+<div>
+	<h3>Problem 1. Planar coordinates</h3>
+	<p>
+		Write functions for working with shapes in standard Planar coordinate system.
+		Points are represented by coordinates P(X, Y)
+		Lines are represented by two points, marking their beginning and ending L(P1(X1,Y1), P2(X2,Y2))
+		Calculate the distance between two points.
+		Check if three segment lines can form a triangle.
+	</p>
+</div>
+<div>
+	<div>
+		<span>Tell us the X of a point 1: </span>
+		<input type="text" id="xPoint1">
+		<span>Tell us the Y of a point 1: </span>
+		<input type="text" id="yPoint1">
+		<input type="button" onclick="window.alert(buildPoint(parseInt(document.getElementById('xPoint1').value), parseInt(document.getElementById('yPoint1').value)))" value="Create point!">
+	</div>
+	<div>
+		<span>Tell us the X of a point 2: </span>
+		<input type="text" id="xPoint2">
+		<span>Tell us the Y of a point 2: </span>
+		<input type="text" id="yPoint2">
+		<input type="button" onclick="window.alert(buildLine(buildPoint(parseInt(document.getElementById('xPoint1').value), parseInt(document.getElementById('yPoint1').value)), buildPoint(parseInt(document.getElementById('xPoint2').value), parseInt(document.getElementById('yPoint2').value))))" value="Create Line!">
+	</div>
+	<input type="button" onclick="distanceBetweenTwoPoints(buildPoint(parseInt(document.getElementById('xPoint1').value), parseInt(document.getElementById('yPoint1').value)), buildPoint(parseInt(document.getElementById('xPoint2').value), parseInt(document.getElementById('yPoint2').value)))" value="Calculate distance between points!">
+</div>
+
+<div>
+	<h3>Problem 2. Remove elements</h3>
+	<p>
+		Write a function that removes all elements with a given value.
+		Attach it to the array type.
+	</p>
+</div>
+<div>
+	<div>
+		<span>Tell us a sequence of elements separated by white space (array): </span>
+		<input type="text" id="sequenceInput">
+		<br/>
+		<span>Tell us the value of the element we should remove: </span>
+		<input type="text" id="valueToBeRemoved">
+		<input type="button" onclick="createArray().remove(document.getElementById('valueToBeRemoved').value)" value="Remove!">
+	</div>
+</div>
+
+<div>
+	<h3>Problem 3. Deep copy</h3>
+	<p>
+		Write a function that makes a deep copy of an object.
+		The function should work for both primitive and reference types.
+	</p>
+	<div>
+		<input type="button" onclick="testDeepCopy()" value="--- Look at the console! ---">
+	</div>
+</div>
+
+<div>
+	<h3>Problem 4. Has property</h3>
+	<p>
+		Write a function that checks if a given object contains a given property.
+	</p>
+	<div>
+		<input type="button" onclick="testHasProperty()" value="--- Look at the console! ---">
+	</div>
+</div>
+
+<div>
+	<h3>Problem 5. Youngest person</h3>
+	<p>
+		Write a function that finds the youngest person in a given array of people and prints his/hers full name
+		Each person has properties firstname, lastname and age.
+	</p>
+	<div>
+		<input type="button" onclick="testfindTheYoungest()" value="Find the youngest">
+	</div>
+</div>
+
+<div>
+	<h3>Problem 6. ???</h3>
+	<p>
+		Write a function that groups an array of people by age, first or last name.
+		The function must return an associative array, with keys - the groups, and values - arrays with people in this groups
+		Use function overloading (i.e. just one function)
+	</p>
+	<div>
+		<input type="button" onclick="testGroupByAge()" value="Sort by age">
+		<input type="button" onclick="testGroupByFirstname()" value="Sort by first name">
+		<input type="button" onclick="testGroupByLastname()" value="Sort by last name">
+		<p>Check the console for the results!!!</p>
+	</div>
+</div>
+
+
+</body>
+</html>

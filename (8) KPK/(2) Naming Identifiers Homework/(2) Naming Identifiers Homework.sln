@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatePerson", "CreatePerson\CreatePerson.csproj", "{C81B22AB-3409-4949-81FF-4E28ABE98E15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mines", "Mines\Mines.csproj", "{134104EB-6DCE-4C9F-A458-74355D192056}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintBoolean", "PrintBoolean\PrintBoolean.csproj", "{3AB9D2B5-3EBF-40B0-BB6A-D25E5C48ADE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C81B22AB-3409-4949-81FF-4E28ABE98E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C81B22AB-3409-4949-81FF-4E28ABE98E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C81B22AB-3409-4949-81FF-4E28ABE98E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C81B22AB-3409-4949-81FF-4E28ABE98E15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{134104EB-6DCE-4C9F-A458-74355D192056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{134104EB-6DCE-4C9F-A458-74355D192056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{134104EB-6DCE-4C9F-A458-74355D192056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{134104EB-6DCE-4C9F-A458-74355D192056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AB9D2B5-3EBF-40B0-BB6A-D25E5C48ADE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AB9D2B5-3EBF-40B0-BB6A-D25E5C48ADE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AB9D2B5-3EBF-40B0-BB6A-D25E5C48ADE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AB9D2B5-3EBF-40B0-BB6A-D25E5C48ADE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

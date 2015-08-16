@@ -1,0 +1,4 @@
+C# is a programming language.
+.NET is a term that covers both the .NET Framework (an application framework library)
+and the Common Language Runtime which is the runtime for executing applications.
+Microsoft's implementation of C# is heavily integrated with the .NET Framework.

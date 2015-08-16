@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data types and variables</title>
+	<style>
+		p {
+			font-weight: 700;
+			font-size: 1.2em;
+		}
+	</style>
+</head>
+<body>
+<p>Problem 1. JavaScript literals</p>
+<div>
+	<script>
+		var z = 4.7633661930;
+		var a = 1;
+		var b = 'string';
+		var c = {c1: 1, c2: 'string'};
+
+		var e = true;
+
+		var g = [1, 'string', e, true];
+		function h() {
+			document.writeln('I am a function!');
+		};
+
+		document.writeln(z + '<br>');
+		document.writeln(a + '<br>');
+		document.writeln(b + '<br>');
+		document.writeln(c + '<br>');
+		document.writeln(e + '<br>');
+		document.writeln(g + '<br>');
+		h();
+	</script>
+</div>
+<p>
+	Problem 2. Quoted text
+</p>
+<div>
+	<script>
+		var quotedText = "'How you doin'?', Joey said";
+		document.writeln(quotedText);
+	</script>	
+</div>
+
+<p>
+	Problem 3. Typeof variables
+</p>
+<div>
+	<script>
+		document.writeln(typeof(z) + '<br>');
+		document.writeln(typeof(a) + '<br>');
+		document.writeln(typeof(b) + '<br>');
+		document.writeln(typeof(c) + '<br>');
+		document.writeln(typeof(e) + '<br>');
+		document.writeln(typeof(g) + '<br>');
+		document.writeln(typeof(h));
+	</script>	
+</div>
+
+<p>
+	Problem 4. Typeof null
+</p>
+<div>
+	<script>
+		var d = null;
+		var f;
+
+		document.writeln(d + '<br>');
+		document.writeln(f + '<br>');
+		document.writeln('<br>');
+		document.writeln(typeof(d) + '<br>');
+		document.writeln(typeof(f));
+	</script>	
+</div>
+
+</body>
+</html>

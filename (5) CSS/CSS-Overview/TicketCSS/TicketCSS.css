@@ -1,0 +1,49 @@
+body {
+	font-family: calibri;
+	font-size: 14px;
+	color: #bbbbbb;
+	background-color: #595959;
+	font-weight: normal;
+}
+
+table, td, th {
+	border-collapse: collapse;
+	font-weight: normal;
+}
+td, th {
+	padding: 0.5em;
+	vertical-align: top;
+}
+
+.header {
+	font-size: 1.5em;
+	text-align: left;
+}
+
+.def {
+	width: 8em;
+	font-style: italic;
+	color: white;
+}
+
+.yellowText	{
+	color: #fff9b5;
+
+}
+
+.redText {
+	color: red;
+	font-weight: bold;
+}
+
+.orangeText {
+	color: #dd6d23;
+	font-weight: bold;
+}
+
+#name:before {
+	content: url(img1/dot.png);
+	display: inline-block;
+	position: relative;
+	left: -2px;
+}

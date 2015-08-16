@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Operators And Expressions</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+
+<div>
+	<h3>Problem 1. Odd or Even</h3>
+	<p>
+		Write an expression that checks if given integer is odd or even.
+	</p>
+</div>
+<div>
+	<script>
+		function isOdd(number) {
+			return(Boolean(number % 2));
+		}
+
+		document.writeln(isOdd(3) + '<br>');
+		document.writeln(isOdd(2) + '<br>');
+		document.writeln(isOdd(-2) + '<br>');
+		document.writeln(isOdd(-1) + '<br>');
+		document.writeln(isOdd(0) + '<br>');
+
+	</script>
+</div>
+
+<div>	
+	<h3>Problem 2. Divisible by 7 and 5</h3>
+	<p>
+		Write a boolean expression that checks for given integer if it can be divided (without remainder) by 7 and 5 in the same time.
+	</p>
+</div>
+<div>
+	<script>
+		function isDivisibleBy7And5(number) {
+			return(!Boolean(number % 35));
+		}
+
+		document.writeln(isDivisibleBy7And5(3) + '<br>');
+		document.writeln(isDivisibleBy7And5(0) + '<br>');
+		document.writeln(isDivisibleBy7And5(5) + '<br>');
+		document.writeln(isDivisibleBy7And5(7) + '<br>');
+		document.writeln(isDivisibleBy7And5(35) + '<br>');
+		document.writeln(isDivisibleBy7And5(140) + '<br>');
+	</script>	
+</div>
+
+<div>	
+	<h3>Problem 3. Rectangle area</h3>
+	<p>
+		Write an expression that calculates rectangle’s area by given width and height.
+	</p>
+</div>
+<div>
+	<script>
+		function rectangularArea(width, height) {
+			return(width*height);
+		}
+
+		document.writeln(rectangularArea(3, 4) + '<br>');
+		document.writeln(rectangularArea(2.5, 3) + '<br>');
+		document.writeln(rectangularArea(5, 5) + '<br>');
+	</script>	
+</div>
+
+<div>	
+	<h3>Problem 4. Third digit</h3>
+	<p>
+		Write an expression that checks for given integer if its third digit (right-to-left) is 7.
+	</p>
+</div>
+<div>
+	<script>
+		function thirdDigitIs7(number) {
+			var result = number /100
+			result = result | 0;
+			result = result - 7;
+			result = Boolean(result % 10);
+			return(!result);
+		}
+
+		document.writeln(thirdDigitIs7(5) + '<br>');
+		document.writeln(thirdDigitIs7(701) + '<br>');
+		document.writeln(thirdDigitIs7(1732) + '<br>');
+		document.writeln(thirdDigitIs7(9703) + '<br>');
+		document.writeln(thirdDigitIs7(877) + '<br>');
+		document.writeln(thirdDigitIs7(77877) + '<br>');
+		document.writeln(thirdDigitIs7(9999799) + '<br>');
+	</script>	
+</div>
+
+<div>	
+	<h3>Problem 5. Third bit</h3>
+	<p>
+		Write a boolean expression for finding if the bit #3 (counting from 0) of a given integer.
+		The bits are counted from right to left, starting from bit #0.
+		The result of the expression should be either 1 or 0.
+	</p>
+</div>
+<div>
+	<script>
+		function getTheBitAtThirdPosition(number) {
+			var result = (number & 8);
+			result = result >> 3;
+			return result.toString(2)
+		}
+
+		document.writeln(getTheBitAtThirdPosition(5) + '<br>');
+		document.writeln(getTheBitAtThirdPosition(8) + '<br>');
+		document.writeln(getTheBitAtThirdPosition(0) + '<br>');
+		document.writeln(getTheBitAtThirdPosition(15) + '<br>');
+		document.writeln(getTheBitAtThirdPosition(5343) + '<br>');
+		document.writeln(getTheBitAtThirdPosition(62241) + '<br>');
+	</script>	
+</div>
+
+<div>	
+	<h3>Problem 6. Point in Circle</h3>
+	<p>
+		Write an expression that checks if given point P(x, y) is within a circle K({0,0}, 5). //{0,0} is the centre and 5 is the radius
+	</p>
+</div>
+<div>
+	<script>
+		function inACircle(x, y) {
+			return((x*x + y*y) <= 25);
+		}
+
+		document.writeln(inACircle(0, 1) + '<br>');
+		document.writeln(inACircle(-5, 0) + '<br>');
+		document.writeln(inACircle(-4, 5) + '<br>');
+		document.writeln(inACircle(1.5, -3) + '<br>');
+		document.writeln(inACircle(-4, -3.5) + '<br>');
+		document.writeln(inACircle(100, -30) + '<br>');
+		document.writeln(inACircle(0.2, -0.8) + '<br>');
+		document.writeln(inACircle(0.9, -4.93) + '<br>');
+		document.writeln(inACircle(2, 2.655) + '<br>');
+	</script>	
+</div>
+
+<div>	
+	<h3>Problem 7. Is prime</h3>
+	<p>
+		Write an expression that checks if given positive integer number n (n ≤ 100) is prime.
+	</p>
+</div>
+<div>
+	<script>
+		function isPrime(number) {
+			number = Math.abs(number);
+			for (var i = 2; i < number; i++) {
+				if (!(number % i)) {
+					return false;
+				};
+			};
+			return true;
+		}
+
+		document.writeln(isPrime(1) + '<br>');
+		document.writeln(isPrime(2) + '<br>');
+		document.writeln(isPrime(3) + '<br>');
+		document.writeln(isPrime(4) + '<br>');
+		document.writeln(isPrime(9) + '<br>');
+		document.writeln(isPrime(37) + '<br>');
+		document.writeln(isPrime(97) + '<br>');
+		document.writeln(isPrime(51) + '<br>');
+		document.writeln(isPrime(-3) + '<br>');
+		document.writeln(isPrime(0) + '<br>');
+	</script>	
+</div>
+
+<div>	
+	<h3>Problem 8. Trapezoid area</h3>
+	<p>
+		Write an expression that calculates trapezoid's area by given sides a and b and height h.
+	</p>
+</div>
+<div>
+	<script>
+		function trapezoidArea(a, b, h) {
+			return((a+b)/2*h);
+		}
+
+		document.writeln(trapezoidArea(5, 7, 12) + '<br>');
+		document.writeln(trapezoidArea(2, 1, 33) + '<br>');
+		document.writeln(trapezoidArea(8.5, 4.3, 2.7) + '<br>');
+		document.writeln(trapezoidArea(100, 200, 300) + '<br>');
+		document.writeln(trapezoidArea(0.222, 0.333, 0.555) + '<br>');
+	</script>	
+</div>
+
+<div>	
+	<h3>Problem 9. Point in Circle and outside Rectangle</h3>
+	<p>
+		Write an expression that checks for given point P(x, y) if it is within the circle K( (1,1), 3) and out of the rectangle R(top=1, left=-1, width=6, height=2).
+	</p>
+</div>
+<div>
+	<script>
+		function inACircleOutOfRectangular(x, y) {
+			var inCircle = ((x-1)*(x-1) + (y-1)*(y-1)) <= 9;
+			var outRect = (x<-1) || (x>5) || (y<-1) || (y>1);
+			return(inCircle && outRect);
+		}
+
+		document.writeln(inACircleOutOfRectangular(1, 2) + '<br>');
+		document.writeln(inACircleOutOfRectangular(2.5, 2) + '<br>');
+		document.writeln(inACircleOutOfRectangular(0, 1) + '<br>');
+		document.writeln(inACircleOutOfRectangular(2.5, 1) + '<br>');
+		document.writeln(inACircleOutOfRectangular(2, 0) + '<br>');
+		document.writeln(inACircleOutOfRectangular(4, 0) + '<br>');
+		document.writeln(inACircleOutOfRectangular(2.5, 1.5) + '<br>');
+		document.writeln(inACircleOutOfRectangular(2, 1.5) + '<br>');
+		document.writeln(inACircleOutOfRectangular(1, 2.5) + '<br>');
+		document.writeln(inACircleOutOfRectangular(-100, -100) + '<br>');
+
+
+	</script>	
+</div>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+body {
+	font-family: calibri;
+	font-size: 14px;
+}
+
+table, th, td {
+	border-collapse: collapse;
+}
+
+table {
+	border: 1px solid #d5d4c2;
+}
+
+td, th {
+	padding: 5px;
+}
+
+td {
+	border-left: 1px solid #d5d4c2;
+	padding-right: 50px;
+}
+
+th {
+	background-color: #52b506;
+	color: white;
+	font-weight: normal;
+	text-align: left;
+}
+
+th {
+	border-left: 1px solid #407f29;
+	border-bottom: 1px solid #407f29;
+}
+
+th:first-of-type, td:first-of-type {
+	border-left: none;
+}
+
+tbody tr:nth-child(2n+1) {
+	background-color: white;
+}
+
+tbody tr:nth-child(2n) {
+	background-color: #ececd8;
+}
+
+.UK:before {
+	content: url(img2/UK.jpg);
+	vertical-align: -25%;
+}
+
+.DE:before {
+	content: url(img2/DE.jpg);
+	vertical-align: -25%;
+}
+
+.MX:before {
+	content: url(img2/MX.jpg);
+	vertical-align: -25%;
+}

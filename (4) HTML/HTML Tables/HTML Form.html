@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML Form</title>
+		<style>
+			#Submit
+			{ 
+				background: url(Images/Submit.png) no-repeat;
+				border: 0px;
+				width: 50px;
+				height: 30px;
+			}
+			div
+			{
+				margin: 3px;
+			}
+			label:after
+			{ 
+			    content: "*req";
+			    font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="Submit" method="get" accept-charset="utf-8">
+			<div>
+				<label>
+					Member name: 
+					<input type="text" name="Name" required>
+				</label>
+			</div>
+			<div>
+				<label>
+					Email: 
+					<input type="email" name="Name" required>
+				</label>
+			</div>
+			<div>
+				<label>
+					School: 
+					<input type="text" name="Name" required>
+				</label>
+			</div>
+			<div>
+				<input type="submit" name="Submit" value="" id="Submit">
+			</div>
+		</form>
+	</body>
+</html>

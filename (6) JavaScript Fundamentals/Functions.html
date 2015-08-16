@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Functions</title>
+	<style>
+		
+	</style>
+	<script>
+		function englishDigit() {
+			var inputNumber = parseInt(document.getElementById('englishDigitInput').value);
+			var digit = inputNumber % 10;
+			var result;
+			switch (digit) {
+				case 0: result = 'zero';
+				break;
+				case 1: result = 'one';
+				break;
+				case 2: result = 'two';
+				break;
+				case 3: result = 'three';
+				break;
+				case 4: result = 'four';
+				break;
+				case 5: result = 'five';
+				break;
+				case 6: result = 'six';
+				break;
+				case 7: result = 'seven';
+				break;
+				case 8: result = 'eight';
+				break;
+				case 9: result = 'nine';
+				break;
+				default: result = 'not a digit';
+			}
+			return(window.alert(result));
+		}
+
+		function reverseDigits() {
+			var inputNumber = document.getElementById('floatingPointNumber').value;
+			var result=inputNumber[inputNumber.length-1];
+			for (var i = inputNumber.length-2; i >= 0; i--) {
+				result = result + inputNumber[i];
+			}
+			return(window.alert(result));
+		}
+
+		function countOccurrencesOf() {
+			var inputText = document.getElementById('inputText').value;
+			inputText = inputText.replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+			var arrText = inputText.split(' ');
+			var inputWord = document.getElementById('wordToBeFound').value;
+
+			var result=0;
+			for (var i = 0; i < arrText.length; i++) {
+				if (arrText[i] === inputWord) {
+					result += 1;
+				}
+			}
+			return(window.alert(inputWord + ' was found ' + result + ' times.'));
+		}
+
+		function countDivsOnThePage() {
+			var result = document.getElementsByTagName('div').length;
+			window.alert('There are ' + result + ' divs on this web page.');
+		}
+
+		function testOccurrencesFunction() {
+			var arrayOfNumbers = new Array();
+			var temp;
+			var lenghtOfArray = Math.floor((Math.random() * 30) + 1);
+			var numberAtPosition = Math.floor((Math.random() * (lenghtOfArray - 1)) + 1);
+			for (var i = 0; i < lenghtOfArray; i++) {
+				temp = Math.floor((Math.random() * 10) + 1);
+				arrayOfNumbers.push(temp);
+			}
+			document.getElementById('inputText').value = arrayOfNumbers.join(' ');
+			document.getElementById('wordToBeFound').value = arrayOfNumbers[numberAtPosition];
+			return countOccurrencesOf();
+		}
+
+		function checkIfLargerCore(positionToCheck, arrText) {
+			var isGreater = false;
+			if (positionToCheck >= arrText.length || positionToCheck < 0) {
+				isGreater = true;
+			}
+
+			else if (positionToCheck == 0) {
+				if (parseInt(arrText[positionToCheck]) > parseInt(arrText[positionToCheck + 1])) {
+					isGreater = true;;
+				}
+				else {
+					return;
+				}
+			}
+			else if (positionToCheck == arrText.length - 1) {
+				if (parseInt(arrText[positionToCheck]) > parseInt(arrText[positionToCheck + 1])) {
+					isGreater = true;;
+				}
+				else {
+					return;
+				}
+			}
+			else {
+				if (parseInt(arrText[positionToCheck]) > parseInt(arrText[positionToCheck - 1]) && parseInt(arrText[positionToCheck]) > parseInt(arrText[positionToCheck + 1])) {
+					isGreater = true;
+				}
+				else {
+					return;
+				}
+			}
+			return isGreater;
+		}
+
+		function checkIfLargerThanNeighbours() {
+			var inputText = document.getElementById('largerThanNeighboursInput').value;
+			var arrText = inputText.split(' ');
+			var positionToCheck = parseInt(document.getElementById('positionToBeChecked').value);
+			
+			if (checkIfLargerCore(positionToCheck, arrText)) {
+				return(window.alert('The number at position ' + (positionToCheck) +' is greater that its neighbours.'));
+			}
+			else {
+				return(window.alert('The number at position ' + (positionToCheck) +' is not greater that its neighbours.'));
+			}
+		}
+
+		function findFirstLargerThanNeighbours() {
+			var inputNumbers = document.getElementById('firstLargerThanNeighboursInput').value;
+			document.getElementById('largerThanNeighboursInput').value = inputNumbers;
+			inputArray = inputNumbers.split(' ');
+
+			for (var i = 0; i < inputArray.length; i++) {
+				if (checkIfLargerCore(i, inputArray)) {
+					return (window.alert('The number at position ' + (i) +' is greater that its neighbours.'));
+				}
+			}
+			return(window.alert(-1));
+		}
+
+	</script>
+</head>
+<body>
+
+<div>
+	<h3>Problem 1. English digit</h3>
+	<p>
+		Write a function that returns the last digit of given integer as an English word
+	</p>
+</div>
+<div>
+	<span>Tell us a number: </span>
+	<input type="text" id="englishDigitInput">
+	<input type="button" onclick="englishDigit()" value="Get the last digit!">
+</div>
+
+<div>	
+	<h3>Problem 2. Reverse number</h3>
+	<p>
+		Write a function that reverses the digits of given decimal number.
+	</p>
+</div>
+<div>
+	<span>Give us a floating point number: </span>
+	<input type="text" id="floatingPointNumber">
+	<input type="button" onclick="reverseDigits()" value="Reverse">
+		
+</div>
+
+<div>	
+	<h3>Problem 3. Occurrences of word</h3>
+	<p>
+		Write a function that finds all the occurrences of word in a text.
+		The search can be case sensitive or case insensitive.
+		Use function overloading.
+	</p>
+</div>
+<div>
+	<span>Tell us a sequence of numbers separated by empty space: </span>
+	<textarea id="inputText"></textarea>
+	<input type="text" id="wordToBeFound">
+	<input type="button" onclick="countOccurrencesOf()" value="Count!">
+</div>
+
+<div>	
+	<h3>Problem 4. Number of elements</h3>
+	<p>
+		Write a function to count the number of div elements on the web page
+	</p>
+</div>
+<div>
+	<input type="button" onclick="countDivsOnThePage()" value="Count the divs on the page!">
+</div>
+
+<div>	
+	<h3>Problem 5. Appearance count</h3>
+	<p>
+		Write a function that counts how many times given number appears in given array.
+		Write a test function to check if the function is working correctly.
+	</p>
+</div>
+<div>
+	<input type="button" onclick="testOccurrencesFunction()" value="Count!">
+</div>
+
+<div>	
+	<h3>Problem 6. Larger than neighbours</h3>
+	<p>
+		Write a function that checks if the element at given position in given array of integers is bigger than its two neighbours (when such exist).
+	</p>
+</div>
+<div>
+	<span>Tell us a sequence of numbers separated by empty space: </span>
+	<input type="text" id="largerThanNeighboursInput">
+	<input type="text" id="positionToBeChecked" style="width:20px">
+	<input type="button" onclick="checkIfLargerThanNeighbours()" value="Check!">
+</div>
+
+<div>	
+	<h3>Problem 7.First larger than neighbours</h3>
+	<p>
+		Write a function that returns the index of the first element in array that is larger than its neighbours or -1, if there is no such element.
+		Use the function from the previous exercise.
+	</p>
+</div>
+<div>
+	<span>Tell us a sequence of numbers separated by empty space: </span>
+	<input type="text" id="firstLargerThanNeighboursInput">
+	<input type="button" onclick="findFirstLargerThanNeighbours()" value="Find it!">
+</div>
+
+</body>
+</html>

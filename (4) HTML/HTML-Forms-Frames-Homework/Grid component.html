@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Grid component</title>
+		<style>
+			body
+			{
+				font-size: 14px;
+				font-family: calibri;
+			}
+			table, th, td
+			{
+				border-collapse: collapse;
+				border: 1px solid #B2B2B2;
+				font-weight: normal;
+			}
+			th, td
+			{
+				padding: 5px;
+				text-align: left;
+			}
+			tbody td
+			{
+				padding-right: 50px;
+			}
+			tfoot label
+			{
+				margin-left: 30px;
+			}
+			thead, tfoot
+	        {
+	            background-color: #E8E8E8;
+	        }
+			a
+			{
+				height: 20px;
+            	padding: 3px;
+            	margin: 1px;
+            	font-style: normal;
+            	color: black;
+            	text-decoration: none;
+			}
+			a:active
+			{
+				border: 1px solid red;
+			}
+
+			button[type="button"]
+			{
+				border: none;
+				vertical-align: middle;
+				height: 20px;
+				background-size: 100%;
+			}
+			button[type="button"]:hover
+			{
+				border: 1px solid gray;
+			}
+			.funnel
+			{
+				background: url(Images/Funnel.png) no-repeat;
+				width: 20px;
+				margin-right: 40px;
+			}
+			.farLeft
+			{ 
+				background: url(Images/Far_Left.png) no-repeat;
+				width: 40px;
+			}
+			.farRight
+			{ 
+				background: url(Images/Far_Right.png) no-repeat;
+				width: 40px;
+			}
+			.left
+			{ 
+				background: url(Images/Left.png) no-repeat;
+				width: 15px;
+			}
+			.right
+			{ 
+				background: url(Images/Right.png) no-repeat;
+				width: 15px;
+			}
+			#rightAligned
+			{
+				float: right;
+			}
+			.short
+	        {
+	            width: 30px;
+	        }
+	        .medium
+	        {
+	            width: 100px;
+	        }
+		</style>
+	</head>
+	<body>
+		<form method="get" accept-charset="utf-8">
+			<table>
+				<thead>
+					<tr>
+						<th colspan="6">Drag a colunm header and drop it hereto group by that column</th>
+					</tr>
+					<tr>
+						<th>
+	                        <label for="productID">ProductID</label>
+	                    </th>
+	                    <th>
+	                        <label for="productName">Product Name</label>
+	                    </th>
+	                    <th>
+	                        <label for="unitPrice">Unit Price</label>
+	                    </th>
+	                    <th>
+	                        <label for="quantity">Quantity per Unit</label>
+	                    </th>
+	                    <th>
+	                        <label for="units">Units in stock</label>
+	                    </th>
+	                    <th>
+	                        <label for="discontinued">Discontinued</label>
+	                    </th>
+					</tr>
+					<tr>
+						<th>
+	                        <input type="text" id="productID" class="short"/>
+	                    </th>
+	                    <th>
+	                        <input type="text" id="productName" class="long"/>
+	                    </th>
+	                    <th>
+	                        <input type="text" id="unitPrice" class="medium"/>
+	                        <button type="button" class="funnel"></button>
+	                    </th>
+	                    <th>
+	                        <input type="text" id="quantity" class="medium"/>
+	                    </th>
+	                    <th>
+	                        <input type="text" id="units" class="medium"/>
+	                        <button type="button" class="funnel"></button>
+	                    </th>
+	                    <th>
+	                        <input type="checkbox" id="discontinued"/>
+	                        <button type="button" class="funnel"></button>
+	                    </th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<td colspan="6">
+							<button type="button" class="farLeft"></button>
+							<button type="button" class="left"></button>
+							<a href="Grid%20component.html">1</a>
+							<a href="Grid%20component.html">2</a>
+							<a href="Grid%20component.html">3</a>
+							<a href="Grid%20component.html">4</a>
+							<a href="Grid%20component.html">5</a>
+							<a href="Grid%20component.html">6</a>
+							<a href="Grid%20component.html">7</a>
+							<a href="Grid%20component.html">8</a>
+							<a href="Grid%20component.html">9</a>
+							<a href="Grid%20component.html">10</a>
+							<span>...</span>
+							<button type="button" class="right"></button>
+							<button type="button" class="farRight"></button>
+							<label for="pageSize">Page size:</label>
+							<select id="pageSize">
+								<option value="10" selected="selected">10</option>
+								<option value="20">20</option>
+								<option value="50">50</option>
+								<option value="100">100</option>
+								<option value="500">500</option>
+							</select>
+							<span id="rightAligned">335104 items in 33511 pages</span>
+						</td>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+	                    <td>
+	                        1
+	                    </td>
+	                    <td>
+	                        Chai
+	                    </td>
+	                    <td>
+	                        $18.00
+	                    </td>
+	                    <td>
+	                        10 boxes x 20 bags
+	                    </td>
+	                    <td>
+	                        39
+	                    </td>
+	                    <td>
+	                        <input type="checkbox"/>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        2
+	                    </td>
+	                    <td>
+	                        Chang
+	                    </td>
+	                    <td>
+	                        $19.00
+	                    </td>
+	                    <td>
+	                        24 - 12 oz bottles
+	                    </td>
+	                    <td>
+	                        17
+	                    </td>
+	                    <td>
+	                        <input type="checkbox"/>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        3
+	                    </td>
+	                    <td>
+	                        Anseed Syrup
+	                    </td>
+	                    <td>
+	                        $10.00
+	                    </td>
+	                    <td>
+	                        12 - 500 ml bottles
+	                    </td>
+	                    <td>
+	                        13
+	                    </td>
+	                    <td>
+	                        <input type="checkbox"/>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        4
+	                    </td>
+	                    <td>
+	                        Chef Anton's Cajun Seasoning
+	                    </td>
+	                    <td>
+	                        $22.00
+	                    </td>
+	                    <td>
+	                        48 - 6 oz jars
+	                    </td>
+	                    <td>
+	                        53
+	                    </td>
+	                    <td>
+	                        <input type="checkbox"/>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        5
+	                    </td>
+	                    <td>
+	                        Chef Anton's Glumbo Mix
+	                    </td>
+	                    <td>
+	                        $21.35
+	                    </td>
+	                    <td>
+	                        36 boxes
+	                    </td>
+	                    <td>
+	                        0
+	                    </td>
+	                    <td>
+	                        <input type="checkbox" checked="checked"/>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        6
+	                    </td>
+	                    <td>
+	                        Grandma's Boysenberry Spread
+	                    </td>
+	                    <td>
+	                        $25.00
+	                    </td>
+	                    <td>
+	                        12 - 8 oz jars
+	                    </td>
+	                    <td>
+	                        120
+	                    </td>
+	                    <td>
+	                        <input type="checkbox"/>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        7
+	                    </td>
+	                    <td>
+	                        Uncle Bob's Organic Dried Pears
+	                    </td>
+	                    <td>
+	                        $30.00
+	                    </td>
+	                    <td>
+	                        12 - 1 lb pkgs.
+	                    </td>
+	                    <td>
+	                        15
+	                    </td>
+	                    <td>
+	                        <input type="checkbox"/>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        8
+	                    </td>
+	                    <td>
+	                        Northwoods Cranberry Sauce
+	                    </td>
+	                    <td>
+	                        $40.00
+	                    </td>
+	                    <td>
+	                        12 - 12 oz jars
+	                    </td>
+	                    <td>
+	                        6
+	                    </td>
+	                    <td>
+	                        <input type="checkbox"/>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        9
+	                    </td>
+	                    <td>
+	                        Mishi Kobe Niku
+	                    </td>
+	                    <td>
+	                        $97.00
+	                    </td>
+	                    <td>
+	                        18 - 500 g pkgs.
+	                    </td>
+	                    <td>
+	                        29
+	                    </td>
+	                    <td>
+	                        <input type="checkbox" checked="checked"/>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        10
+	                    </td>
+	                    <td>
+	                        Ikura
+	                    </td>
+	                    <td>
+	                        $31.00
+	                    </td>
+	                    <td>
+	                        12 - 200 ml jars
+	                    </td>
+	                    <td>
+	                        31
+	                    </td>
+	                    <td>
+	                        <input type="checkbox"/>
+	                    </td>
+	                </tr>
+				</tbody>
+			</table>
+		</form>
+	</body>
+</html>

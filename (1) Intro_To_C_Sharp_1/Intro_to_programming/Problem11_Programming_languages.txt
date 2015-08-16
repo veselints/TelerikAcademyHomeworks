@@ -1,0 +1,31 @@
+C# -  is a multi-paradigm programming language encompassing strong typing, imperative, declarative,
+functional, generic, object-oriented (class-based), and component-oriented programming disciplines.
+It was developed by Microsoft within its .NET initiative. 
+C# is one of the programming languages designed for the Common Language Infrastructure.
+The most recent version is C# 5.0, which was released on August 15, 2012. The language is intended
+for use in developing software components suitable for deployment in distributed environments.
+
+C++ - Compared to C#, C++ is not reflective nor event-driven language.
+Its intended use is as application or system language.
+
+C - C is low-level operations programming language.
+It is imperative and procedural language.
+
+Java - According to its use, Java is very simmilar to C#.
+Java is object orientated, imperative, generic and reflective language.
+It is mainly used for applications, business systems, client-side, server-side and Web.
+
+JavaScript - JavaScript is a programming language mainly used for Web, client-side and server-side applications.
+Compared to Java, it is not generic, but reflective and functional language.
+
+PHP - PHP is mainly used for server-side development, Web applications and Web.
+It is imperative, object orientated, procedural and reflective language.
+
+Python - Python is a programming language mainly used for Web, scripting, scientific computing and general applications.
+In is aspect and object orientated, imperative, functional and reflective language.
+
+Ruby - Symilarly to Python, Ruby is both aspect and object orientated programming language.
+It is used for applications, scripting and Web.
+
+Visual Basic - Visual Basic is imperative, object orientated and generic language.
+It is a third-generation event-driven programming language from Microsoft.

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Letter table</title>
+		<style>
+			table, td
+			{
+				border: 1px solid black;
+			}
+			td
+			{
+				text-align: center;
+				width: 30px;
+			}
+			.rightAlligned
+			{
+				text-align: right;
+			}
+			.leftAlligned
+			{
+				text-align: left;
+			}
+			.rightBottomAlligned
+			{
+				text-align: right;
+				vertical-align: bottom;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tbody>
+				<tr>
+					<td colspan="3">
+						Title goes here
+					</td>
+					<td>
+						A
+					</td>
+					<td class="rightAlligned">
+						B
+					</td>
+				</tr>
+				<tr>
+					<td class="leftAlligned" rowspan="3">
+						C
+					</td>
+					<td>
+						D
+					</td>
+					<td>
+						E
+					</td>
+					<td>
+						F
+					</td>
+					<td class="rightAlligned">
+						G
+					</td>
+				</tr>
+				<tr>
+					<td>
+						H
+					</td>
+					<td colspan="2">
+						I
+					</td>
+					<td rowspan="2" class="rightBottomAlligned">
+						J
+					</td>
+				</tr>
+				<tr>
+					<td>
+						K
+					</td>
+					<td>
+						L
+					</td>
+					<td>
+						M
+					</td>
+				</tr>
+				<tr>
+					<td class="rightAlligned">
+						N
+					</td>
+					<td colspan="4">
+						O
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

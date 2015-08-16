@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+	<style>
+		
+	</style>
+	<script>
+		function generateArray() {
+			var arr = new Array(20);
+			for (var i = 0; i < 20; i++) {
+				arr[i] = i*5;
+			}
+			for (var i = 0; i < 20; i++) {
+				console.log(arr[i]);
+			}
+		}
+
+		function compareTwoCharArrays() {
+			var arr1 = document.getElementById('arrayInput1').value;
+			var arr2 = document.getElementById('arrayInput2').value;
+			if (arr1 < arr2) {
+				window.alert(arr1 + ' array is lexicographically before ' + arr2);
+				return;
+			}
+			else if (arr1 > arr2) {
+				window.alert(arr2 + ' array is lexicographically before ' + arr1);
+				return;
+			}
+			return(window.alert('The given arrays are equal!'));
+		}
+
+		function findMaxSequenceOfEquals() {
+			var inputNumbers = document.getElementById('sequenceOfEquals').value;
+			var arr = inputNumbers.split(' ');
+			var numberOfEqual = 0;
+			var currentNumberOfEqual = 1;
+			var endIndex = 0;
+			for (var i = 1; i < arr.length; i++) {
+				if (arr[i] !== arr[i-1]) {
+					if (currentNumberOfEqual > numberOfEqual) {
+						numberOfEqual = currentNumberOfEqual;
+						endIndex = i;
+					}
+					currentNumberOfEqual = 1;
+				}
+				else {
+					currentNumberOfEqual += 1;
+				}
+			}
+
+			var result;
+
+			if (currentNumberOfEqual > numberOfEqual) {
+				endIndex = arr.length; 
+				result = arr.slice(endIndex - currentNumberOfEqual);
+			}
+			else {
+				result = arr.slice((endIndex-numberOfEqual), (endIndex));
+			}
+
+			return window.alert(result);
+		}
+
+		function findMaxSequenceOfIcreasing() {
+			var inputNumbers = document.getElementById('sequenceOfIcreasing').value;
+			var arr = inputNumbers.split(' ');
+			var numberOfIncreasing = 0;
+			var currentNumberOfIncreasing = 1;
+			var endIndex = 0;
+			for (var i = 1; i < arr.length; i++) {
+				if (parseInt(arr[i]) <= parseInt(arr[i-1])) {
+					if (currentNumberOfIncreasing > numberOfIncreasing) {
+						numberOfIncreasing = currentNumberOfIncreasing;
+						endIndex = i;
+					}
+					currentNumberOfIncreasing = 1;
+				}
+				else {
+					currentNumberOfIncreasing += 1;
+				}
+			}
+
+			var result;
+
+			if (currentNumberOfIncreasing > numberOfIncreasing) {
+				endIndex = arr.length; 
+				result = arr.slice(endIndex - currentNumberOfIncreasing);
+			}
+			else {
+				result = arr.slice((endIndex-numberOfIncreasing), (endIndex));
+			}
+
+			return window.alert(result);
+		}
+
+		function selectionSort() {
+			var inputNumbers = document.getElementById('selectionSortSequence').value;
+			var arr = inputNumbers.split(' ');
+
+			var tempNumber;
+			var indexOfSmallest;
+
+			for (var i = 0; i < arr.length - 1; i++) {
+				debugger;
+				tempNumber = parseInt(arr[i]);
+				indexOfSmallest = i;
+				for (var j = i+1; j < arr.length; j++) {
+					if (parseInt(arr[j]) < tempNumber) {
+						tempNumber = arr[j];
+						indexOfSmallest = j;
+					}
+				}
+				if(indexOfSmallest != i) {
+			        arr[indexOfSmallest] = arr[i];
+			        arr[i] = tempNumber;
+			    }
+			}
+			return window.alert(arr);
+		}
+
+		function findMostFrequentNumber() {
+			var inputNumbers = document.getElementById('mostFrequentNumber').value;
+			var arr = inputNumbers.split(' ');
+
+			var mostFrequent = arr[0];
+			var currentlyRepeated = 1;
+			var timesRepeated = 1;
+
+			for (var i = 0; i < arr.length - 1; i++) {
+				debugger;
+				for (var j = i+1; j < arr.length; j++) {
+					if (arr[j] === arr[i]) {
+						currentlyRepeated += 1;
+						}
+					}
+					if (currentlyRepeated > timesRepeated) {
+							timesRepeated = currentlyRepeated;
+							mostFrequent = arr[i];
+				}
+				currentlyRepeated = 1;
+			}
+			return window.alert('Most frequent number is ' + mostFrequent + '. It appears ' + timesRepeated + ' times');
+		}	
+
+		function binarySearch(a, n, iMin, iMax) {
+			var iMid;
+			if (iMax < iMin) {
+				return window.alert('The array is empty!');
+			}
+			else {
+				if ((iMax + iMin) % 2 === 0) {
+					iMid = (iMax + iMin) / 2;
+				}
+				else {
+					iMid = (iMax + iMin - 1) / 2;
+				}
+				if (parseInt(a[iMid]) > n) {
+			        return binarySearch(a, n, iMin, iMid - 1);
+			    }
+		      	else if (parseInt(a[iMid]) < n) {
+			        return binarySearch(a, n, iMid + 1, iMax);
+			    }
+		      	else {
+			        return window.alert('The index of the element is ' + iMid);
+			    }
+			}
+		}
+
+		function binarySearchStart() {
+			var inputNumbers = document.getElementById('binarySearchInput').value;
+			var arr = inputNumbers.split(' ');
+			var searchedNumber = parseInt(document.getElementById('binarySearchNumber').value);
+			binarySearch(arr, searchedNumber, 0, arr.length);
+		}	
+
+	</script>
+</head>
+<body>
+
+<div>
+	<h3>Problem 1. Increase array members</h3>
+	<p>
+		Write a script that allocates array of 20 integers and initializes each element by its index multiplied by 5.
+		Print the obtained array on the console.
+	</p>
+</div>
+<div>
+	<script>
+		generateArray();
+	</script>
+	<p>---Look at the console!---</p>
+</div>
+
+<div>	
+	<h3>Problem 2. Lexicographically comparison</h3>
+	<p>
+		Write a script that compares two char arrays lexicographically (letter by letter).
+	</p>
+</div>
+<div>
+	<span>Give us an array of chars 1 (string): </span>
+	<input type="text" id="arrayInput1">
+	<br/>
+	<span>Give us an array of chars 2 (string): </span>
+	<input type="text" id="arrayInput2">
+	<input type="button" id="triggerFunction" onclick="compareTwoCharArrays()" value="Compare">
+		
+</div>
+
+<div>	
+	<h3>Problem 3. Maximal sequence</h3>
+	<p>
+		Write a script that finds the maximal sequence of equal elements in an array.
+	</p>
+</div>
+<div>
+	<span>Tell us a sequence of numbers separated by empty space: </span>
+	<input type="text" id="sequenceOfEquals">
+	<input type="button" onclick="findMaxSequenceOfEquals()" value="Find it!">
+</div>
+
+<div>	
+	<h3>Problem 4. Maximal increasing sequence</h3>
+	<p>
+		Write a script that finds the maximal increasing sequence in an array.
+	</p>
+</div>
+<div>
+	<span>Tell us a sequence of numbers separated by empty space: </span>
+	<input type="text" id="sequenceOfIcreasing">
+	<input type="button" onclick="findMaxSequenceOfIcreasing()" value="Find it!">
+</div>
+
+<div>	
+	<h3>Problem 5. Selection sort</h3>
+	<p>
+		Sorting an array means to arrange its elements in increasing order.
+		Write a script to sort an array.
+		Use the selection sort algorithm: Find the smallest element, move it at the first position, find the smallest from the rest, move it at the second position, etc.
+	</p>
+</div>
+<div>
+	<span>Tell us a sequence of numbers separated by empty space: </span>
+	<input type="text" id="selectionSortSequence">
+	<input type="button" onclick="selectionSort()" value="Sort">
+</div>
+
+<div>	
+	<h3>Problem 6. Most frequent number</h3>
+	<p>
+		Write a script that finds the most frequent number in an array.
+	</p>
+</div>
+<div>
+	<span>Tell us a sequence of numbers separated by empty space: </span>
+	<input type="text" id="mostFrequentNumber">
+	<input type="button" onclick="findMostFrequentNumber()" value="Find it!">
+</div>
+
+<div>	
+	<h3>Problem 7. Binary search</h3>
+	<p>
+		Write a script that finds the index of given element in a sorted array of integers by using the binary search algorithm.
+	</p>
+</div>
+	<span>Tell us a sequence of numbers separated by empty space: </span>
+	<input type="text" id="binarySearchInput">
+	<input type="text" id="binarySearchNumber" style="width:20px">
+	<input type="button" onclick="binarySearchStart()" value="Find it!">
+<div>
+	
+</div>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loops</title>
+	<style>
+		
+	</style>
+	<script>
+		function printNumbersToN() {
+			var n = document.getElementById('numberInput').value;
+			var result = 'Result: ';
+			for (var i = 1; i <= n; i++) {
+				result = result + i + ' ';
+			};
+			return window.alert(result);
+		}
+
+		function printNumbersToNNotDivisable() {
+			var n = document.getElementById('numberInput2').value;
+			var result = 'Result: ';
+			for (var i = 1; i <= n; i++) {
+				if (i % 3 != 0 && i % 7 != 0) {
+					result = result + i + ' ';
+				}
+			}
+			return window.alert(result);
+		}
+
+		function minMaxOfSequence() {
+			var inputNumbers = document.getElementById('numberInput3').value;
+			var arr = inputNumbers.split(' ');
+			var minResult = Number.MAX_VALUE;
+			var maxResult = Number.MIN_VALUE;
+			for (var i = 0; i < arr.length; i++) {
+				if (parseInt(arr[i]) < minResult) {
+					minResult = parseInt(arr[i]);
+				}
+				if (parseInt(arr[i]) > maxResult) {
+					maxResult = parseInt(arr[i]);
+				}
+			}
+			return window.alert('min: ' + minResult.toString() + ' max: ' + maxResult.toString());
+		}
+
+		function lexicographicallySmallestAndLargest(obj) {
+			var resultSmallest = 'zzz';
+			var resultLargest = 'aaa';
+			for(var key in obj){
+					if (key<=resultSmallest) {
+						resultSmallest = key
+					}
+					if (key>=resultLargest) {
+						resultLargest = key
+					}
+			}
+			return document.write('Smallest: ' + resultSmallest + ' Largest: ' + resultLargest);
+		}	
+	</script>
+</head>
+<body>
+
+<div>
+	<h3>Problem 1. Numbers</h3>
+	<p>
+		Write a script that prints all the numbers from 1 to N.
+	</p>
+</div>
+<div>
+	<form>
+		<span>Tell us a number: </span>
+		<input type="text" id="numberInput">
+		<input type="button" id="triggerFunction" onclick="printNumbersToN()" value="Click!">
+	</form>
+</div>
+
+<div>	
+	<h3>Problem 2. Numbers not divisible</h3>
+	<p>
+		Write a script that prints all the numbers from 1 to N, that are not divisible by 3 and 7 at the same time
+	</p>
+</div>
+<div>
+	<form>
+		<span>Tell us a number: </span>
+		<input type="text" id="numberInput2">
+		<input type="button" id="triggerFunction2" onclick="printNumbersToNNotDivisable()" value="Click!">
+	</form>
+</div>
+
+<div>	
+	<h3>Problem 3. Min/Max of sequence</h3>
+	<p>
+		Write a script that finds the max and min number from a sequence of numbers.
+	</p>
+</div>
+<div>
+	<form>
+		<span>Tell us a sequence of numbers separated by empty space: </span>
+		<input type="text" id="numberInput3">
+		<input type="button" id="triggerFunction3" onclick="minMaxOfSequence()" value="Click!">
+	</form>
+</div>
+
+<div>	
+	<h3>Problem 4. Lexicographically smallest</h3>
+	<p>
+		Write a script that finds the lexicographically smallest and largest property in document, window and navigator objects.
+	</p>
+</div>
+<div>
+	<div>
+		<p>
+			The lexicographically smallest and largest property in document are: 
+		</p>
+		<script>
+			lexicographicallySmallestAndLargest(document);
+		</script>
+	</div>
+	<div>
+		<p>
+			The lexicographically smallest and largest property in window are: 
+		</p>
+		<script>
+			lexicographicallySmallestAndLargest(window);
+		</script>
+	</div>
+	<div>
+		<p>
+			The lexicographically smallest and largest property in navigator are: 
+		</p>
+		<script>
+			lexicographicallySmallestAndLargest(navigator);
+		</script>
+	</div>
+</div>
+
+</body>
+</html>

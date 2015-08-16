@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conditional Statements</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+
+<div>
+	<h3>Problem 1. Exchange if greater</h3>
+	<p>
+		Write an if statement that takes two double variables a and b and exchanges their values if the first one is greater than the second.
+		As a result print the values a and b, separated by a space.
+	</p>
+</div>
+<div>
+	<script>
+		function exchangeIfGreater(a, b) {
+			if (a>b) {
+				var c = a;
+				a = b;
+				b = c;
+			};
+			return(document.writeln(a + ' '+ b + '<br>'));
+		}
+
+		exchangeIfGreater(5, 2);
+		exchangeIfGreater(3, 4);
+		exchangeIfGreater(5.5, 4.5);
+
+
+	</script>
+</div>
+
+<div>	
+	<h3>Problem 2. Multiplication Sign</h3>
+	<p>
+		Write a script that shows the sign (+, - or 0) of the product of three real numbers, without calculating it.
+		Use a sequence of if operators.
+	</p>
+</div>
+<div>
+	<script>
+		function defineSign(a, b, c) {
+			var result;
+			if (a===0 || b ===0 || c===0) {
+				return(0);
+			}
+			else if (a>0) {
+				if (b>0) {
+					if (c>0) {
+						return('+');
+					}
+					else {
+						return('-');
+					}
+				}
+				else {
+					if (c>0) {
+						return('-');
+					}
+					else {
+						return('+');
+					}
+				}
+			}
+			else {
+				if (b>0) {
+					if (c>0) {
+						return('-');
+					}
+					else {
+						return('+');
+					}
+				}
+				else {
+					if (c>0) {
+						return('+');
+					}
+					else {
+						return('-');
+					}
+				}
+			}
+		}
+
+		document.writeln(defineSign(5, 2, 2) + '<br>');
+		document.writeln(defineSign(-2, -2, 1) + '<br>');
+		document.writeln(defineSign(-2, 4, 3) + '<br>');
+		document.writeln(defineSign(0, -2.5, 4) + '<br>');
+		document.writeln(defineSign(-1, -0.5, -5.1) + '<br>');
+
+	</script>	
+</div>
+
+<div>	
+	<h3>Problem 3. The biggest of Three</h3>
+	<p>
+		Write a script that finds the biggest of three numbers.
+		Use nested if statements.
+	</p>
+</div>
+<div>
+	<script>
+		function biggestOfThree(a, b, c) {
+			if (a>=b) {
+				if (b>=c) {
+					return a;
+				}
+				else {
+					if (c>=a) {
+						return c;
+					}
+					else {
+						return a;
+					}
+				}
+			}
+			else {
+				if (b>=c) {
+					return b;
+				}
+				else {
+					return c;
+				}
+			}
+		}
+		document.writeln(biggestOfThree(5, 2, 2) + '<br>');
+		document.writeln(biggestOfThree(-2, -2, 1) + '<br>');
+		document.writeln(biggestOfThree(-2, 4, 3) + '<br>');
+		document.writeln(biggestOfThree(0, -2.5, 5) + '<br>');
+		document.writeln(biggestOfThree(-0.1, -0.5, -1.1) + '<br>');
+	</script>	
+</div>
+
+<div>	
+	<h3>Problem 4. Sort 3 numbers</h3>
+	<p>
+		Sort 3 real values in descending order.
+		Use nested if statements.
+	</p>
+</div>
+<div>
+	<script>
+		function sortThreeNumbers(a, b, c) {
+			var result;
+			if (a>=b) {
+				if (b>=c) {
+					result = a.toString() +' '+ b.toString() +' '+ c.toString();
+				}
+				else {
+					if (c>=a) {
+						result = c.toString() +' '+ a.toString() +' '+ b.toString();
+					}
+					else {
+						result = a.toString() +' '+ c.toString() +' '+ b.toString();
+					}
+				}
+			}
+			else {
+				if (b>=c) {
+					if (a>=c) {
+						result = b.toString() +' '+ a.toString() +' '+ c.toString();
+					}
+					else {
+						result = b.toString() +' '+ c.toString() +' '+ a.toString();
+					}
+				}
+				else {
+					result = c.toString() +' '+ b.toString() +' '+ a.toString();
+				}
+			}
+			return result;
+		}
+
+		document.writeln(sortThreeNumbers(5, 1, 2) + '<br>');
+		document.writeln(sortThreeNumbers(-2, -2, 1) + '<br>');
+		document.writeln(sortThreeNumbers(-2, 4, 3) + '<br>');
+		document.writeln(sortThreeNumbers(0, -2.5, 5) + '<br>');
+		document.writeln(sortThreeNumbers(-1.1, -0.5, -0.1) + '<br>');
+		document.writeln(sortThreeNumbers(10, 20, 30) + '<br>');
+		document.writeln(sortThreeNumbers(1, 1, 1) + '<br>');
+	</script>	
+</div>
+
+<div>	
+	<h3>Problem 5. Digit as word</h3>
+	<p>
+		Write a script that asks for a digit (0-9), and depending on the input, shows the digit as a word (in English).
+		Print “not a digit” in case of invalid input.
+		Use a switch statement.
+	</p>
+</div>
+<div>
+	<script>
+		function digitAsAWordn(number) {
+			switch (number) {
+				case 0: return 'zero';
+				case 1: return 'one';
+				case 2: return 'two';
+				case 3: return 'three';
+				case 4: return 'four';
+				case 5: return 'five';
+				case 6: return 'six';
+				case 7: return 'seven';
+				case 8: return 'eight';
+				case 9: return 'nine';
+				default: return 'not a digit';
+			}
+		}
+
+		document.writeln(digitAsAWordn(2) + '<br>');
+		document.writeln(digitAsAWordn(1) + '<br>');
+		document.writeln(digitAsAWordn(0) + '<br>');
+		document.writeln(digitAsAWordn(5) + '<br>');
+		document.writeln(digitAsAWordn(-0.1) + '<br>');
+		document.writeln(digitAsAWordn('hi') + '<br>');
+		document.writeln(digitAsAWordn(9) + '<br>');
+		document.writeln(digitAsAWordn(10) + '<br>');
+
+	</script>	
+</div>
+
+<div>	
+	<h3>Problem 6. Quadratic equation</h3>
+	<p>
+		Write a script that reads the coefficients a, b and c of a quadratic equation ax2 + bx + c = 0 and solves it (prints its real roots).
+		Calculates and prints its real roots.
+	</p>
+</div>
+<div>
+	<script>
+		function quadraticEquation(a, b, c) {
+			var x1 = (-b - Math.sqrt(b*b - 4*a*c)) / (2*a);
+			var x2 = (-b + Math.sqrt(b*b - 4*a*c)) / (2*a);
+			if (isNaN(x1) && isNaN(x2)) {
+				return('not real roots');
+			}
+			else if (isNaN(x1)) {
+				return('x = ' + x2.toString());
+			}
+			else if (isNaN(x2)) {
+				return('x = ' + x2.toString());
+			}
+			return('x1 = ' + x1.toString() + '; ' + 'x2 = ' + x2.toString());
+		}
+
+		document.writeln(quadraticEquation(2, 5, -3) + '<br>');
+		document.writeln(quadraticEquation(-1, 3, 0) + '<br>');
+		document.writeln(quadraticEquation(-0.5, 4, -8) + '<br>');
+		document.writeln(quadraticEquation(5, 2, 8) + '<br>');
+
+	</script>	
+</div>
+
+<div>	
+	<h3>Problem 7. The biggest of five numbers</h3>
+	<p>
+		Write a script that finds the greatest of given 5 variables.
+		Use nested if statements.
+	</p>
+</div>
+<div>
+	<script>
+		function biggestOfFive(a, b, c, d, e) {
+			var currentMax = a;
+			 if (b > currentMax) {
+            	currentMax = b;
+	        }
+
+	        if (c > currentMax) {
+	            currentMax = c;
+	        }
+
+	        if (d > currentMax) {
+	            currentMax = d;
+	        }
+
+	        if (e > currentMax) {
+	            currentMax = e;
+	        }
+	        return currentMax;
+	    }
+
+		document.writeln(biggestOfFive(5, 2, 2, 4, 1) + '<br>');
+		document.writeln(biggestOfFive(-2, -22, 1, 0, 0) + '<br>');
+		document.writeln(biggestOfFive(-2, 4, 3, 2, 0) + '<br>');
+		document.writeln(biggestOfFive(0, -2.5, 0, 5, 5) + '<br>');
+		document.writeln(biggestOfFive(-3, -0.5, -1.1, -2, -0.1) + '<br>');
+
+
+	</script>	
+</div>
+
+<div>	
+	<h3>Problem 8. Number as words</h3>
+	<p>
+		Write a script that converts a number in the range [0…999] to words, corresponding to its English pronunciation.
+	</p>
+</div>
+<div>
+	<script> 
+		function numberAsWords(number) {
+			
+		        var hundreds = Math.floor(number / 100),
+		            tens = (Math.floor(number / 10)) % 10,
+		            digits = (number % 10),
+		            special = 10 + digits;
+
+		        switch (special) {
+		            case 11:
+		                special = "eleven";
+		                break;
+		            case 12:
+		                special = "twelve";
+		                break;
+		            case 13:
+		                special = "thirteen";
+		                break;
+		            case 14:
+		                special = "fourteen";
+		                break;
+		            case 15:
+		                special = "fifteen";
+		                break;
+		            case 16:
+		                special = "sixteen";
+		                break;
+		            case 17:
+		                special = "seventeen";
+		                break;
+		            case 18:
+		                special = "eighteen";
+		                break;
+		            case 19:
+		                special = "nineteen";
+		                break;
+		        }
+
+		        switch (hundreds) {
+		            case 1:
+		                hundreds = "one hundred ";
+		                break;
+		            case 2:
+		                hundreds = "two hundred ";
+		                break;
+		            case 3:
+		                hundreds = "three hundred ";
+		                break;
+		            case 4:
+		                hundreds = "four hundred ";
+		                break;
+		            case 5:
+		                hundreds = "five hundred ";
+		                break;
+		            case 6:
+		                hundreds = "six hundred ";
+		                break;
+		            case 7:
+		                hundreds = "seven hundred ";
+		                break;
+		            case 8:
+		                hundreds = "eight hundred ";
+		                break;
+		            case 9:
+		                hundreds = "nine hundred ";
+		                break;
+		            case 0:
+		                hundreds = "";
+		                break;
+		        }
+
+		        if (number % 100 !== 0 && number >= 100) {
+		            hundreds = hundreds + 'and ';
+		        }
+
+		        if (tens == 1 && digits > 0) {
+		            result = hundreds + special;
+		            hundreds = tens = digits = "";
+		            return result;
+		            return;
+		        }
+
+		        switch (tens) {
+		            case 1:
+		                tens = "ten";
+		                break;
+		            case 2:
+		                tens = "twenty ";
+		                break;
+		            case 3:
+		                tens = "thirty ";
+		                break;
+		            case 4:
+		                tens = "fourty ";
+		                break;
+		            case 5:
+		                tens = "fifty ";
+		                break;
+		            case 6:
+		                tens = "sixty ";
+		                break;
+		            case 7:
+		                tens = "seventy ";
+		                break;
+		            case 8:
+		                tens = "eighty ";
+		                break;
+		            case 9:
+		                tens = "ninety ";
+		                break;
+		            case 0:
+		                tens = "";
+		                break;
+		        }
+
+		        switch (digits) {
+		            case 1:
+		                digits = "one";
+		                break;
+		            case 2:
+		                digits = "two";
+		                break;
+		            case 3:
+		                digits = "three";
+		                break;
+		            case 4:
+		                digits = "four";
+		                break;
+		            case 5:
+		                digits = "five";
+		                break;
+		            case 6:
+		                digits = "six";
+		                break;
+		            case 7:
+		                digits = "seven";
+		                break;
+		            case 8:
+		                digits = "eight";
+		                break;
+		            case 9:
+		                digits = "nine";
+		                break;
+		            default:
+		                digits = "";
+		                break;
+		        }
+
+		        if (number === 0) {
+		            result = "zero";
+		            return result;
+		        }
+
+		        result = hundreds + tens + digits;
+		        return result;
+			}
+
+		document.writeln(numberAsWords(0) + '<br>');
+		document.writeln(numberAsWords(9) + '<br>');
+		document.writeln(numberAsWords(10) + '<br>');
+		document.writeln(numberAsWords(12) + '<br>');
+		document.writeln(numberAsWords(19) + '<br>');
+		document.writeln(numberAsWords(25) + '<br>');
+		document.writeln(numberAsWords(98) + '<br>');
+		document.writeln(numberAsWords(98) + '<br>');
+		document.writeln(numberAsWords(273) + '<br>');
+		document.writeln(numberAsWords(400) + '<br>');
+		document.writeln(numberAsWords(501) + '<br>');
+		document.writeln(numberAsWords(617) + '<br>');
+		document.writeln(numberAsWords(711) + '<br>');
+		document.writeln(numberAsWords(999) + '<br>');
+
+	</script>	
+</div>
+
+</body>
+</html>
