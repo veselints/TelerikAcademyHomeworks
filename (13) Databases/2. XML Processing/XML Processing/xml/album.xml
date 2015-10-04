@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<albums>
+	<album>
+		<name>Ride the Lightning</name>
+		<artist>Metallica</artist>
+	</album>
+	<album>
+		<name>Californication</name>
+		<artist>Red Hot Cilli Pappers</artist>
+	</album>
+	<album>
+		<name>Powerslave</name>
+		<artist>Iron Maiden</artist>
+	</album>
+	<album>
+		<name>Rubber Soul</name>
+		<artist>The Beatles</artist>
+	</album>
+	<album>
+		<name>Parklife</name>
+		<artist>Blur</artist>
+	</album>
+	<album>
+		<name>Definitely Maybe</name>
+		<artist>Oasis</artist>
+	</album>
+	<album>
+		<name>Paranoid</name>
+		<artist>Black Sabbath</artist>
+	</album>
+	<album>
+		<name>The Real Thing</name>
+		<artist>Faith No More</artist>
+	</album>
+</albums>

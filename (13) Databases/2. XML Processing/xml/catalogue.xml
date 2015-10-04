@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<catalogue>
+  <album>
+    <name>Ride the Lightning</name>
+    <artist>Metallica</artist>
+    <year>1998</year>
+    <producer>BMG</producer>
+    <price>22</price>
+    <songs>
+      <song>
+        <title>Fight Fire with Fire</title>
+        <duration>3.51</duration>
+      </song>
+      <song>
+        <title>Ride the Lightning</title>
+        <duration>7.45</duration>
+      </song>
+      <song>
+        <title>For Whom the Bell Tolls</title>
+        <duration>4.1</duration>
+      </song>
+      <song>
+        <title>Fade to Black</title>
+        <duration>3.43</duration>
+      </song>
+      <song>
+        <title>Trapped Under Ice</title>
+        <duration>5.15</duration>
+      </song>
+      <song>
+        <title>Escape</title>
+        <duration>2.27</duration>
+      </song>
+      <song>
+        <title>Creeping Death</title>
+        <duration>8.16</duration>
+      </song>
+      <song>
+        <title>The Call of Ktulu</title>
+        <duration>5.4</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Californication</name>
+    <artist>Red Hot Cilli Pappers</artist>
+    <year>1979</year>
+    <producer>BMG</producer>
+    <price>19.99</price>
+    <songs>
+      <song>
+        <title>Around the World</title>
+        <duration>4.1</duration>
+      </song>
+      <song>
+        <title>Parallel Universe</title>
+        <duration>2.27</duration>
+      </song>
+      <song>
+        <title>Scar Tissue</title>
+        <duration>5.58</duration>
+      </song>
+      <song>
+        <title>Otherside</title>
+        <duration>5.15</duration>
+      </song>
+      <song>
+        <title>Get on Top</title>
+        <duration>8.16</duration>
+      </song>
+      <song>
+        <title>Californication</title>
+        <duration>5.58</duration>
+      </song>
+      <song>
+        <title>Easily</title>
+        <duration>2.27</duration>
+      </song>
+      <song>
+        <title>Porcelain</title>
+        <duration>7.45</duration>
+      </song>
+      <song>
+        <title>Emit Remmus</title>
+        <duration>8.13</duration>
+      </song>
+      <song>
+        <title>I Like Dirt</title>
+        <duration>7.45</duration>
+      </song>
+      <song>
+        <title>This Velvet Glove</title>
+        <duration>3.22</duration>
+      </song>
+      <song>
+        <title>Savior</title>
+        <duration>2.27</duration>
+      </song>
+      <song>
+        <title>Purple Stain</title>
+        <duration>4.1</duration>
+      </song>
+      <song>
+        <title>Right on Time</title>
+        <duration>5.4</duration>
+      </song>
+      <song>
+        <title>Road Trippin</title>
+        <duration>4.1</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Powerslave</name>
+    <artist>Iron Maiden</artist>
+    <year>1989</year>
+    <producer>BMG</producer>
+    <price>14.5</price>
+    <songs>
+      <song>
+        <title>Aces High</title>
+        <duration>3.51</duration>
+      </song>
+      <song>
+        <title>2 Minutes to Midnight</title>
+        <duration>3.43</duration>
+      </song>
+      <song>
+        <title>Losfer Words (Big 'Orra)</title>
+        <duration>8.13</duration>
+      </song>
+      <song>
+        <title>Flash of the Blade</title>
+        <duration>8.13</duration>
+      </song>
+      <song>
+        <title>The Duellists</title>
+        <duration>4.1</duration>
+      </song>
+      <song>
+        <title>Back in the Village</title>
+        <duration>7.45</duration>
+      </song>
+      <song>
+        <title>Powerslave</title>
+        <duration>4.53</duration>
+      </song>
+      <song>
+        <title>Rime of the Ancient Mariner</title>
+        <duration>7.45</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Rubber Soul</name>
+    <artist>The Beatles</artist>
+    <year>2012</year>
+    <producer>BMG</producer>
+    <price>19.99</price>
+    <songs>
+      <song>
+        <title>Drive My Car</title>
+        <duration>8.16</duration>
+      </song>
+      <song>
+        <title>Norwegian Wood (This Bird Has Flown)</title>
+        <duration>5.15</duration>
+      </song>
+      <song>
+        <title>You Won't See Me</title>
+        <duration>8.16</duration>
+      </song>
+      <song>
+        <title>Nowhere Man</title>
+        <duration>4.53</duration>
+      </song>
+      <song>
+        <title>Think for Yourself</title>
+        <duration>8.13</duration>
+      </song>
+      <song>
+        <title>The Word</title>
+        <duration>3.51</duration>
+      </song>
+      <song>
+        <title>Michelle</title>
+        <duration>3.43</duration>
+      </song>
+      <song>
+        <title>What Goes On</title>
+        <duration>5.15</duration>
+      </song>
+      <song>
+        <title>Girl</title>
+        <duration>8.13</duration>
+      </song>
+      <song>
+        <title>I'm Looking Through You</title>
+        <duration>5.4</duration>
+      </song>
+      <song>
+        <title>In My Life</title>
+        <duration>7.45</duration>
+      </song>
+      <song>
+        <title>Wait</title>
+        <duration>4.1</duration>
+      </song>
+      <song>
+        <title>If I Needed Someone</title>
+        <duration>5.4</duration>
+      </song>
+      <song>
+        <title>Run for Your Life</title>
+        <duration>3.43</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Parklife</name>
+    <artist>Blur</artist>
+    <year>1988</year>
+    <producer>BMG</producer>
+    <price>34</price>
+    <songs>
+      <song>
+        <title>Girls &amp; Boys</title>
+        <duration>8.13</duration>
+      </song>
+      <song>
+        <title>Tracy Jacks</title>
+        <duration>3.43</duration>
+      </song>
+      <song>
+        <title>End of a Century</title>
+        <duration>5.15</duration>
+      </song>
+      <song>
+        <title>Parklife</title>
+        <duration>8.16</duration>
+      </song>
+      <song>
+        <title>Bank Holiday</title>
+        <duration>5.15</duration>
+      </song>
+      <song>
+        <title>Badhead</title>
+        <duration>5.4</duration>
+      </song>
+      <song>
+        <title>The Debt Collector</title>
+        <duration>8.16</duration>
+      </song>
+      <song>
+        <title>Far Out</title>
+        <duration>4.1</duration>
+      </song>
+      <song>
+        <title>To the End</title>
+        <duration>2.27</duration>
+      </song>
+      <song>
+        <title>London Loves</title>
+        <duration>4.53</duration>
+      </song>
+      <song>
+        <title>Trouble in the Message Centre</title>
+        <duration>5.15</duration>
+      </song>
+      <song>
+        <title>Clover Over Dover</title>
+        <duration>5.4</duration>
+      </song>
+      <song>
+        <title>Magic America</title>
+        <duration>3.22</duration>
+      </song>
+      <song>
+        <title>Jubilee</title>
+        <duration>3.43</duration>
+      </song>
+      <song>
+        <title>This Is a Low</title>
+        <duration>5.15</duration>
+      </song>
+      <song>
+        <title>Lot 105</title>
+        <duration>2.27</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Definitely Maybe</name>
+    <artist>Oasis</artist>
+    <year>2000</year>
+    <producer>BMG</producer>
+    <price>6.79</price>
+    <songs>
+      <song>
+        <title>Rock 'n' Roll Star</title>
+        <duration>8.13</duration>
+      </song>
+      <song>
+        <title>Shakermaker</title>
+        <duration>3.51</duration>
+      </song>
+      <song>
+        <title>Live Forever</title>
+        <duration>3.51</duration>
+      </song>
+      <song>
+        <title>Up in the Sky</title>
+        <duration>3.43</duration>
+      </song>
+      <song>
+        <title>Columbia</title>
+        <duration>3.43</duration>
+      </song>
+      <song>
+        <title>Supersonic</title>
+        <duration>4.1</duration>
+      </song>
+      <song>
+        <title>Bring It On Down</title>
+        <duration>5.58</duration>
+      </song>
+      <song>
+        <title>Cigarettes &amp; Alcohol</title>
+        <duration>8.13</duration>
+      </song>
+      <song>
+        <title>Digsy's Dinner</title>
+        <duration>8.13</duration>
+      </song>
+      <song>
+        <title>Slide Away</title>
+        <duration>3.51</duration>
+      </song>
+      <song>
+        <title>Married with Children</title>
+        <duration>5.4</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Paranoid</name>
+    <artist>Black Sabbath</artist>
+    <year>1975</year>
+    <producer>BMG</producer>
+    <price>15</price>
+    <songs>
+      <song>
+        <title>War Pigs</title>
+        <duration>7.45</duration>
+      </song>
+      <song>
+        <title>Paranoid</title>
+        <duration>3.51</duration>
+      </song>
+      <song>
+        <title>Planet Caravan</title>
+        <duration>2.27</duration>
+      </song>
+      <song>
+        <title>Iron Man</title>
+        <duration>5.58</duration>
+      </song>
+      <song>
+        <title>Electric Funeral</title>
+        <duration>8.13</duration>
+      </song>
+      <song>
+        <title>Hand of Doom</title>
+        <duration>3.43</duration>
+      </song>
+      <song>
+        <title>Rat Salad</title>
+        <duration>3.51</duration>
+      </song>
+      <song>
+        <title>Fairies Wear Boots</title>
+        <duration>4.1</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>The Real Thing</name>
+    <artist>Faith No More</artist>
+    <year>1973</year>
+    <producer>BMG</producer>
+    <price>9.99</price>
+    <songs>
+      <song>
+        <title>From Out of Nowhere</title>
+        <duration>4.53</duration>
+      </song>
+      <song>
+        <title>Epic</title>
+        <duration>5.4</duration>
+      </song>
+      <song>
+        <title>Falling to Pieces</title>
+        <duration>5.58</duration>
+      </song>
+      <song>
+        <title>Surprise! You're Dead!</title>
+        <duration>5.58</duration>
+      </song>
+      <song>
+        <title>Zombie Eaters</title>
+        <duration>4.1</duration>
+      </song>
+      <song>
+        <title>The Real Thing</title>
+        <duration>5.15</duration>
+      </song>
+      <song>
+        <title>Underwater Love</title>
+        <duration>7.45</duration>
+      </song>
+      <song>
+        <title>The Morning After</title>
+        <duration>8.13</duration>
+      </song>
+      <song>
+        <title>Woodpecker from Mars</title>
+        <duration>2.27</duration>
+      </song>
+      <song>
+        <title>War Pigs</title>
+        <duration>2.27</duration>
+      </song>
+      <song>
+        <title>Edge of the World</title>
+        <duration>8.13</duration>
+      </song>
+    </songs>
+  </album>
+</catalogue>
